@@ -11,7 +11,7 @@ const ISRTest = ({ time }) => {
 
 export async function getStaticProps() {
   const currentTime = new Date()
-  currentTime.toLocaleString('en-US', { timeZone: 'America/New_York' })
+  currentTime.toLocaleString('en-US', { timeZone: 'America/Chicago' })
 
   console.log("currentTime", currentTime);
   return {
