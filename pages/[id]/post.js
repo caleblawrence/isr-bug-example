@@ -5,7 +5,6 @@ const ISRTest = ({ time }) => {
   return (
     <div style={{ margin: 50 }}>
       <p style={{ fontSize: 30 }}>{time}</p>
-      <Link href="123/post">Link to another ISR page</Link>
     </div>
   );
 };
@@ -21,6 +20,10 @@ export async function getStaticProps() {
     },
     revalidate: 60,
   };
+}
+
+export async function getStaticPaths() {
+  return { paths: [], fallback: "blocking" };
 }
 
 export default ISRTest;
